@@ -14,8 +14,8 @@ const bandNameSchema = new Schema({
   },
 })
 
-const BandName = mongoose.model("BandName", bandNameSchema)
+const Bandname = mongoose.model("Bandname", bandNameSchema)
 
 export {
-  BandName
+  Bandname
 }
