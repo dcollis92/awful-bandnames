@@ -1,5 +1,14 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+<section>
+  <h1>Awful Awful Bandnames</h1>
+  <h2>The Worst of the Worst</h2>
+	<ul>
+  <% bandnames.forEach(bandname => { %>
+    <li># <%= bandname.name %> <%#= rating %></li>
+  <% }) %>
+  </ul>
+</section>
 
 <%- include('../partials/footer') %>

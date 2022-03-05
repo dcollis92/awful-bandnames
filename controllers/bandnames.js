@@ -1,11 +1,8 @@
 import { Bandname } from "../models/bandname.js"
 
 function index(req, res) {
-  // Find all tacos
   Bandname.find({})
-  // When we have all the bandnames
   .then(bandnames => {
-    // Do something with the bandnames
     res.render("bandnames/index", {
       title: "Awful Bandnames",
       bandnames,
