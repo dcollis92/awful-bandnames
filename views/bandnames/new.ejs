@@ -1,5 +1,15 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+<main>
+  <h1>Your Worst Idea</h1>
+  <form id="new-form" action="/bandnames" method="POST">
+      <label for="bandname-input">Submit a Fake Band Name:</label>
+      <input type="text" name="bandname" id="bandname-input" />
+      <label for="bio-input">Add an Awful Bio (50 characters max):</label>
+      <input type="text" name="bio-input" id="bio-input" />
+      <button type="submit">Submit</button>
+    </form>
+  </main>
 
 <%- include('../partials/footer') %>

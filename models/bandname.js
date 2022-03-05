@@ -16,7 +16,6 @@ const bandNameSchema = new Schema({
   },
 }, {
   timestamps: true,
-  required: [true, "Can't leave blank!"]
 })
 
 const Bandname = mongoose.model("Bandname", bandNameSchema)
