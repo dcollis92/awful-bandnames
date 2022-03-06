@@ -14,9 +14,16 @@ function index(req, res) {
   })
 }
 
+function newBandname(req, res) {
+  res.render('bandnames/new', {
+    title: "Add Bandname"
+  })
+}
+
+
 function create(req, res) {
-  req.body.owner = req.user.profile._id
-  req.body.tasty = !!req.body.tasty
+  // req.body.owner = req.user.profile._id
+  // req.body.tasty = !!req.body.tasty
   Bandname.create(req.body)
   .then(taco => {
     res.redirect("/bandnames")
@@ -42,13 +49,13 @@ function show(req, res) {
   })
 }
 
-function flipTasty(req, res) {
-  Taco.findById(req.params.id)
-  .then(taco => {
-    taco.tasty = !taco.tasty
-    taco.save()
+function addRating(req, res) {
+  bandname.findById(req.params.id)
+  .then(bandname => {
+    bandname.tasty = !bandname.tasty
+    bandname.save()
     .then(() => {
-      res.redirect(`/bandnames/${taco._id}`)
+      res.redirect(`/bandnames/${bandname._id}`)
     })
   })
   .catch(err => {
@@ -56,6 +63,8 @@ function flipTasty(req, res) {
     res.redirect("/bandnames")
   })
 }
+
+// ADJUST TO ADD RATING
 
 function edit(req, res) {
   Taco.findById(req.params.id)
@@ -114,9 +123,10 @@ function deleteBandname(req, res) {
 
 export {
   index,
+  newBandname as new,
   create,
   show,
-  flipTasty,
+  addRating,
   edit,
   update,
   deleteBandname as delete

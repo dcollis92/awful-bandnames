@@ -28,7 +28,7 @@ nav {
   background-color: white;
   font-size: 1.6rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 main {

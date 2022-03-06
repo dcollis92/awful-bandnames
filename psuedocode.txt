@@ -1,0 +1,5 @@
+// Create models for the bandnames, profiles, and users (possibly ratings?)
+//create controllers for the api, bandnames, profiles,
+// create routes for the api, auth, bandnames, index, profiles,
+create views for bandname, edit, index, new, show
+

@@ -1,5 +1,33 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+<section>
+  <p>Submitted by <%= bandname.owner.name %></p>
+  <h1><%= bandname.name %> 🌮</h1>
+  <!-- <h2>This bandname is <%#= bandname.tasty ? "tasty! 😋" : "not tasty! 😢" %> </h2>
+  <% if (user) {%>
+    <form 
+      action="/bandnames/<%#= bandname._id %>/flip-tasty?_method=PATCH"
+      method="POST"  
+    >
+      <button class="btn" type="submit">
+        Make bandname <%#= bandname.tasty ? "not tasty 🌮😞" : "tasty 🌮🎉" %> 
+      </button>
+    </form>
+    
+    REFACTOR FOR RATING SYSTEM
+    
+  <% } %> -->
+  <% if (bandname.owner.equals(user?.profile._id)) { %>
+    <!-- <form action="/bandnames/<%#= bandname._id %>/edit" method="GET">
+      <button class="btn" type="submit">Edit this bandname 🌮🚧</button>
+    </form> -->
+    <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Delete this bandname ?</button>
+    </form>
+  <% } %>
+</section>
+
+// REFACTOR FOR EDITING BIO
 
 <%- include('../partials/footer') %>

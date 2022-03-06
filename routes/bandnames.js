@@ -6,10 +6,12 @@ const router = Router()
 
 // GET - localhost:3000/bandnames
 router.get('/', bandnamesCtrl.index)
+// GET - localhost:3000/bandnames/new
+router.get('/new', bandnamesCtrl.new)
 // GET - localhost:3000/bandnames/:id
 router.get("/:id", bandnamesCtrl.show)
 // GET - localhost:3000/bandnames/:id/edit
-router.get("/:id/edit", bandnamesCtrl.edit)
+router.get("/:id/edit", isLoggedIn, bandnamesCtrl.edit)
 // POST - localhost:3000/bandnames
 router.post("/", isLoggedIn, bandnamesCtrl.create)
 // PATCH - localhost:3000/bandnames/:id/add-rating
