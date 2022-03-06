@@ -1,5 +1,20 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+<section>
+  <h1>Edit the Bandname Bio</h1>
+  <form action="/bandnames/<%= bandname._id %>?_method=PUT" method="POST">
+    <label>
+      Name:
+      <input 
+        type="text" 
+        bio="bio" 
+        value="<%= bandname.bio %>"
+        autocomplete="off"
+      >
+    </label>
+    <button type="submit">Edit the 🌮</button>
+  </form>
+</section>
 
 <%- include('../partials/footer') %>

@@ -22,8 +22,7 @@ function newBandname(req, res) {
 
 
 function create(req, res) {
-  // req.body.owner = req.user.profile._id
-  // req.body.tasty = !!req.body.tasty
+  req.body.owner = req.user.profile._id
   Bandname.create(req.body)
   .then(taco => {
     res.redirect("/bandnames")
@@ -33,6 +32,22 @@ function create(req, res) {
     res.redirect("/bandnames")
   })
 }
+
+// function create(req, res) {
+//   console.log("req.body before", req.body)
+//   req.body.nowShowing = !!req.body.nowShowing
+//   for (let key in req.body) {
+//     if(req.body[key] === "") delete req.body[key]
+//   }
+//   console.log("req.body after", req.body)
+//   // New
+//   const movie = new Movie(req.body)
+//   console.log(movie)
+//   movie.save(function(err) {
+//     if (err) return res.redirect('/movies/new')
+//     res.redirect(`/movies/${movie._id}`)
+//   })
+// }
 
 function show(req, res) {
   Bandname.findById(req.params.id)
