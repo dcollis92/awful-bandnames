@@ -4,6 +4,9 @@
 
 Bio
 
+![Awful Bandnames wireframe](https://i.imgur.com/O8obY3S.png)
+Initial wireframe
+
 ---
 
 ## [Play the game here](<insert link>)
