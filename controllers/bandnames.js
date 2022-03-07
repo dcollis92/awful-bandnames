@@ -68,7 +68,7 @@ function show(req, res) {
 function addRating(req, res) {
   bandname.findById(req.params.id)
   .then(bandname => {
-    bandname.tasty = !bandname.tasty
+    // bandname.tasty = !bandname.tasty
     bandname.save()
     .then(() => {
       res.redirect(`/bandnames/${bandname._id}`)
@@ -83,11 +83,11 @@ function addRating(req, res) {
 // ADJUST TO ADD RATING
 
 function edit(req, res) {
-  Taco.findById(req.params.id)
-  .then(taco => {
+  Bandname.findById(req.params.id)
+  .then(bandname => {
     res.render("bandnames/edit", {
       title: "Edit 🌮",
-      taco,
+      bandname,
     })
   })
   .catch(err => {
@@ -104,7 +104,7 @@ function update(req, res) {
       // req.body.tasty = !!req.body.tasty
       bandname.updateOne(req.body, {new: true})
       .then(() => {
-        res.redirect(`/bandnames/${taco._id}`)
+        res.redirect(`/bandnames/${bandname._id}`)
       })
     } else {
       throw new Error ("🚫 Not Authorized! 🚫")

@@ -34,39 +34,9 @@ function show(req, res) {
   })
 }
 
-// function createCat(req, res) {
-//   Profile.findById(req.user.profile._id)
-//   .then(profile => {
-//     profile.cats.push(req.body)
-//     profile.save()
-//     .then(() => {
-//       res.redirect(`/profiles/${req.user.profile._id}`)
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect(`/profiles/${req.user.profile._id}`)
-//   })
-// }
-
-// function deleteCat(req, res) {
-//   Profile.findById(req.user.profile._id)
-//   .then(profile => {
-//     profile.cats.remove({_id: req.params.id})
-//     profile.save()
-//     .then(() => {
-//       res.redirect(`/profiles/${req.user.profile._id}`)
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect(`/profiles/${req.user.profile._id}`)
-//   })
-// }
 
 export {
   index,
   show,
-  // createCat,
-  // deleteCat,
+
 }
