@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/bandnames/edit.css">
 <%- include('../partials/nav') %>
 
 <section>
@@ -8,12 +9,12 @@
       Name:
       <input 
         type="text" 
-        bio="bio" 
+        name="bio" 
         value="<%= bandname.bio %>"
         autocomplete="off"
       >
     </label>
-    <button type="submit">Edit the 🌮</button>
+    <button type="submit">Edit the Bio</button>
   </form>
 </section>
 
