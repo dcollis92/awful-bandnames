@@ -28,8 +28,9 @@ form * {
 }
 
 section {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   grid-gap: 1.6rem;
 }
 

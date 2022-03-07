@@ -1,7 +1,11 @@
+body > main h1:first-child {
+  margin-bottom: 20px;
+}
+
 form {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 35.2rem));
+  grid-template-columns: repeat(2, minmax(auto, 20rem));
   font-size: 2rem;
 }
 
@@ -14,6 +18,6 @@ form * {
 form > button {
   grid-column: span 2;
   width: 16rem;
-  margin-left: auto;
+  margin: auto;
   font-size: 2.2rem;
 }

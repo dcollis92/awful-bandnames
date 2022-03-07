@@ -3,6 +3,9 @@ import { Bandname } from "../models/bandname.js"
 function index(req, res) {
   Bandname.find({})
   .then(bandnames => {
+    bandnames.forEach(name => {
+      name.ratings = getAvgRating(name.ratings)
+    })
     res.render("bandnames/index", {
       title: "Awful Bandnames",
       bandnames,
@@ -12,6 +15,13 @@ function index(req, res) {
     console.log(err)
     res.redirect("/bandnames")
   })
+}
+
+function getAvgRating(ratings) {
+  if(!ratings.length) return 0;
+  const avg = ratings.reduce((total, r) => 
+    total + parseInt(r), 0) / ratings.length
+  return avg
 }
 
 function newBandname(req, res) {

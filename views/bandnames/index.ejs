@@ -17,8 +17,7 @@
     <tr>
       <td>#</td>
       <td><a href="/bandnames/<%= bandname._id %>"><%= bandname.name %></a</td>
-      <td><%= bandname.rating %></td>
-      <td> Rating </td>
+      <td><%= bandname.ratings %></td>
         <td>  
         <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
         <button>Delete?</button>
