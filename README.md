@@ -16,11 +16,11 @@ Initial wireframe
 ## ⚙ Technologies Used 
 
 - CSS
-- Embedded Javascript
-- JavaScript
+- JS / Embedded JS
 - MongoDB / Mongoose
 - Google Oauth
 - Express
+- Passport
 - Node
 - git
 

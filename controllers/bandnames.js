@@ -23,8 +23,9 @@ function newBandname(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
+  console.log(req.body)
   Bandname.create(req.body)
-  .then(taco => {
+  .then(bandname => {
     res.redirect("/bandnames")
   })
   .catch(err => {

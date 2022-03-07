@@ -6,7 +6,7 @@
   <h2>The Worst of the Worst</h2>
 	<ul>
   <% bandnames.forEach(bandname => { %>
-    <li>#<a href="/bandnames/<%= bandname._id %>"></a> <%= bandname.name %> <%#= rating %></li>
+    <li><a href="/bandnames/<%= bandname._id %>"></a> <%= bandname.name %> <%#= rating %></li>
   <% }) %>
   </ul>
 </section>

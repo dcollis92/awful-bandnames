@@ -2,12 +2,12 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>Your Worst Idea</h1>
+  <h1>Submit a Fake Bandname</h1>
   <form id="new-form" action="/bandnames" method="POST">
-      <label for="bandname-input">Submit a Fake Band Name:</label>
-      <input type="text" name="bandname" id="bandname-input" />
-      <label for="bio-input">Add an Awful Bio (50 characters max):</label>
-      <input type="text" name="bio-input" id="bio-input" />
+      <label for="name">Bandname</label>
+      <input type="text" name="name" id="name" />
+      <label for="bio">Add a Bio (50 characters max):</label>
+      <input type="text" name="bio" id="bio" />
       <button type="submit">Submit</button>
     </form>
   </main>
