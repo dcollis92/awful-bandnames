@@ -3,14 +3,22 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Awful Awful Bandnames</h1>
-  <h2>The Worst of the Worst</h2>
-
+  <h1>Awful... Awful Fake Bandnames</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Rank</th>
+        <th scope="col">Name</th>
+        <th scope="col">Rating</th>
+      </tr>
+    </thead>
+    <tbody>
   <% bandnames.forEach(bandname => { %>
     <tr>
-      <td><%= bandname.name %></td>
+      <td>#</td>
+      <td><a href="/bandnames/<%= bandname._id %>"><%= bandname.name %></a</td>
       <td><%= bandname.rating %></td>
-      <td><a href="/bandnames/<%= bandname._id %>">DETAILS</a></td>
+      <td> Rating </td>
         <td>  
         <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
         <button>Delete?</button>
@@ -18,6 +26,8 @@
       </td>
   </tr>
   <% }) %>
+</tbody>
+</table>
   </ul>
 </section>
 
