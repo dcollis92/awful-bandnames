@@ -99,14 +99,13 @@ function update(req, res) {
   Bandname.findById(req.params.id)
   .then(bandname => {
     if (bandname.owner.equals(req.user.profile._id)) {
-      // the person that created the bandname is trying to edit the bandname
-      req.body.tasty = !!req.body.tasty
+  
+      // req.body.tasty = !!req.body.tasty
       bandname.updateOne(req.body, {new: true})
       .then(() => {
         res.redirect(`/bandnames/${taco._id}`)
       })
     } else {
-      // the person that created the taco is NOT the person trying to edit the taco
       throw new Error ("🚫 Not Authorized! 🚫")
     }
   })
@@ -126,7 +125,6 @@ function deleteBandname(req, res) {
         res.redirect("/bandnames")
       })
     } else {
-      // the person that created the taco is NOT the person trying to delete the taco
       throw new Error ("🚫 Not Authorized! 🚫")
     }
   })
