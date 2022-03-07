@@ -5,9 +5,18 @@
 <section>
   <h1>Awful Awful Bandnames</h1>
   <h2>The Worst of the Worst</h2>
-	<ul>
+
   <% bandnames.forEach(bandname => { %>
-    <li><a href="/bandnames/<%= bandname._id %>"></a> <%= bandname.name %> <%#= rating %></li>
+    <tr>
+      <td><%= bandname.name %></td>
+      <td><%= bandname.rating %></td>
+      <td><a href="/bandnames/<%= bandname._id %>">DETAILS</a></td>
+        <td>  
+        <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
+        <button>Delete?</button>
+      </form>
+      </td>
+  </tr>
   <% }) %>
   </ul>
 </section>

@@ -3,15 +3,14 @@
 <%- include('../partials/nav') %>
 
 <section>
+  <h1><%= bandname.name %></h1>
+  <h2> <%= bandname.bio %></h2>
   <p>Submitted by <%= bandname.owner.name %></p>
-  <h1><%= bandname.name %> Bandname</h1>
   <% if (bandname.owner.equals(user?.profile._id)) { %>
     <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
       <button class="btn" type="submit">Delete this bandname ?</button>
     </form>
   <% } %>
 </section>
-
-// REFACTOR FOR EDITING BIO
 
 <%- include('../partials/footer') %>

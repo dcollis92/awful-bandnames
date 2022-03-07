@@ -9,6 +9,8 @@ html {
   /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 /* resets font size to be 62.5% of the user preference - in most browser configurations this will be 10px */
@@ -19,11 +21,31 @@ html {
 body {
   background-color: white;
   /* Use a system font, if none are available use an available sans-sarif font */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    color: black;
   margin: 0;
+  color: black;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "nav"
+    "main";
+  font-size: 1.8rem;
 }
+
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8eceb;
+  padding: 20px;
+}
+
+body > main h1:first-child {
+  margin-bottom: 50px;
+}
+
+
 
 nav {
   background-color: #8dd7cf;
@@ -42,4 +64,44 @@ main {
 
 h1 {
   font-size: 3.6rem;
+}
+
+body > nav {
+  grid-area: nav;
+  background-color: #8dd7cf;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+nav > i {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #424748;
+}
+
+nav > a:visited {
+  color: #424748;
+}
+
+nav > a:hover {
+  color: white;
+  background-color: #424748;
+}
+
+nav > a.active {
+  color: white;
+}
+
+.fas::before {
+  font-family: "Font Awesome 5 Free";
 }
