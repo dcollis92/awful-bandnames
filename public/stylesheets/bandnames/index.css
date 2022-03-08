@@ -33,11 +33,12 @@ h1 {
   color: #424748;
 }
 
-#list a:visited{
+a:visited {
   color: #424748;
 }
 
-#list a:hover {
-  background-color: white;
+a:hover {
+  background-color: #8dd7cf;;
   color: black;
+  border-radius: 5px;
 }

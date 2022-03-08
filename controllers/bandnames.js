@@ -46,22 +46,6 @@ function create(req, res) {
   })
 }
 
-// function create(req, res) {
-//   console.log("req.body before", req.body)
-//   req.body.nowShowing = !!req.body.nowShowing
-//   for (let key in req.body) {
-//     if(req.body[key] === "") delete req.body[key]
-//   }
-//   console.log("req.body after", req.body)
-//   // New
-//   const movie = new Movie(req.body)
-//   console.log(movie)
-//   movie.save(function(err) {
-//     if (err) return res.redirect('/movies/new')
-//     res.redirect(`/movies/${movie._id}`)
-//   })
-// }
-
 function show(req, res) {
   Bandname.findById(req.params.id)
   .populate("owner")
@@ -83,6 +67,7 @@ function addRating(req, res) {
   Bandname.findById(req.params.id)
   .then(bandname => {
     bandname.ratings.push(req.body)
+    //round off
     bandname.save()
     .then(() => {
       res.redirect(`/bandnames/${bandname._id}`)
@@ -93,8 +78,6 @@ function addRating(req, res) {
     res.redirect("/bandnames")
   })
 }
-
-// ADJUST TO ADD RATING
 
 function edit(req, res) {
   Bandname.findById(req.params.id)
@@ -114,9 +97,7 @@ function update(req, res) {
   Bandname.findById(req.params.id)
   .then(bandname => {
     if (bandname.owner.equals(req.user.profile._id)) {
-  
-      // req.body.tasty = !!req.body.tasty
-      bandname.updateOne(req.body, {new: true})
+        bandname.updateOne(req.body, {new: true})
       .then(() => {
         res.redirect(`/bandnames/${bandname._id}`)
       })
@@ -134,7 +115,6 @@ function deleteBandname(req, res) {
   Bandname.findById(req.params.id)
   .then(bandname => {
     if (bandname.owner.equals(req.user.profile._id)) {
-      // the person that created the bandname is trying to delete the bandname
       bandname.delete()
       .then(() => {
         res.redirect("/bandnames")
