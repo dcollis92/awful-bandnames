@@ -31,7 +31,7 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  grid-gap: 1.6rem;
+  grid-gap: 1.3rem;
 }
 
 section div:nth-child(even) {

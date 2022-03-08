@@ -21,7 +21,6 @@ html {
 body {
   background-color: white;
   /* Use a system font, if none are available use an available sans-sarif font */
-  margin: 0;
   color: black;
   min-height: 100vh;
   display: grid;
@@ -48,7 +47,6 @@ body > main h1:first-child {
 
 
 nav {
-  background-color: #8dd7cf;
   font-size: 1.6rem;
   color: black;
   display: flex;
@@ -57,7 +55,6 @@ nav {
 
 main {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
 }

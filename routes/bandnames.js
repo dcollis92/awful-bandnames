@@ -14,8 +14,8 @@ router.get("/:id", bandnamesCtrl.show)
 router.get("/:id/edit", isLoggedIn, bandnamesCtrl.edit)
 // POST - localhost:3000/bandnames
 router.post("/", isLoggedIn, bandnamesCtrl.create)
-// PATCH - localhost:3000/bandnames/
-router.patch("/", isLoggedIn, bandnamesCtrl.addRating)
+// PATCH - localhost:3000/bandnames/:id/add-rating
+router.patch("/:id/add-rating", isLoggedIn, bandnamesCtrl.addRating)
 // PUT- localhost:3000/bandnames/:id
 router.put("/:id", isLoggedIn, bandnamesCtrl.update)
 
