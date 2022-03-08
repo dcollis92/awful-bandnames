@@ -19,10 +19,10 @@ function index(req, res) {
 
 function getAvgRating(ratings) {
   if(!ratings.length) return 0;
-  console.log(ratings)
+  // console.log(ratings)
   const avg = ratings.reduce((total, r) => 
     total + parseInt(r.rating), 0) 
-  console.log('avg', avg)
+  // console.log('avg', avg)
   return avg / ratings.length
 }
 
