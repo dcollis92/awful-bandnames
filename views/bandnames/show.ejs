@@ -4,14 +4,13 @@
 
 <section>
   <h1><%= bandname.name %></h1>
-  <h2>Rating: <%= bandname.ratings %></h2>
+  <h2>Rating: <%= avgRating %></h2>
   <h2>Bio: <%= bandname.bio %></h2>
   <p>Submitted by <%= bandname.owner.name %></p>
   <form 
-  action="/bandnames/<%= bandname._id %>/add-rating"
+  action="/bandnames/<%= bandname._id %>/ratings"
   id="add-rating"
-  method="POST"
->
+  method="POST">
   <select name="rating" id="rating-select">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -21,7 +20,6 @@
   </select>
   <button type="submit">Add Rating</button>
   </form>
-
   <% if (bandname.owner.equals(user?.profile._id)) { %>
     <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete this Bandname?</button>

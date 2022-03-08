@@ -4,7 +4,7 @@ function index(req, res) {
   Bandname.find({})
   .then(bandnames => {
     bandnames.forEach(name => {
-      name.ratings = getAvgRating(name.ratings)
+      name.avg = getAvgRating(name.ratings)
     })
     res.render("bandnames/index", {
       title: "Awful Bandnames",
@@ -19,9 +19,11 @@ function index(req, res) {
 
 function getAvgRating(ratings) {
   if(!ratings.length) return 0;
+  console.log(ratings)
   const avg = ratings.reduce((total, r) => 
-    total + parseInt(r), 0) / ratings.length
-  return avg
+    total + parseInt(r.rating), 0) 
+  console.log('avg', avg)
+  return avg / ratings.length
 }
 
 function newBandname(req, res) {
@@ -64,9 +66,11 @@ function show(req, res) {
   Bandname.findById(req.params.id)
   .populate("owner")
   .then(bandname => {
+    const avg = getAvgRating(bandname.ratings)
     res.render("bandnames/show", {
       bandname,
-      title: "Show Awful Bandname"
+      title: "Show Awful Bandname",
+      avgRating: avg,
     })
   })
   .catch(err => {
@@ -76,9 +80,9 @@ function show(req, res) {
 }
 
 function addRating(req, res) {
-  bandname.findById(req.params.id)
+  Bandname.findById(req.params.id)
   .then(bandname => {
-    // bandname.tasty = !bandname.tasty
+    bandname.ratings.push(req.body)
     bandname.save()
     .then(() => {
       res.redirect(`/bandnames/${bandname._id}`)
@@ -96,7 +100,7 @@ function edit(req, res) {
   Bandname.findById(req.params.id)
   .then(bandname => {
     res.render("bandnames/edit", {
-      title: "Edit 🌮",
+      title: "Edit",
       bandname,
     })
   })
