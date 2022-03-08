@@ -19,10 +19,10 @@ function index(req, res) {
 
 function getAvgRating(ratings) {
   if(!ratings.length) return 0;
-  // console.log(ratings)
+  console.log(ratings)
   const avg = ratings.reduce((total, r) => 
     total + parseInt(r.rating), 0) 
-  // console.log('avg', avg)
+  console.log('avg', avg)
   return avg / ratings.length
 }
 
@@ -31,7 +31,6 @@ function newBandname(req, res) {
     title: "Add Bandname"
   })
 }
-
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
@@ -77,6 +76,10 @@ function addRating(req, res) {
     console.log(err)
     res.redirect("/bandnames")
   })
+}
+
+function editRating(req, res) {
+  
 }
 
 function edit(req, res) {
@@ -135,6 +138,7 @@ export {
   create,
   show,
   addRating,
+  editRating,
   edit,
   update,
   deleteBandname as delete
