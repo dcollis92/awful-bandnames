@@ -1,7 +1,7 @@
 form {
-  display: grid;
+  /* display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 35.2rem));
+  grid-template-columns: repeat(2, minmax(auto, 35.2rem)); */
   font-size: 2rem;
 }
 
@@ -14,6 +14,13 @@ form * {
 form > button {
   grid-column: span 2;
   width: 16rem;
-  margin-left: auto;
+  /* margin-left: auto; */
   font-size: 2.2rem;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 1.3rem;
 }

@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Edit the Bandname Bio</h1>
+  <h1>Edit Bandname Bio</h1>
   <form action="/bandnames/<%= bandname._id %>?_method=PUT" method="POST">
     <label>
       Name:
@@ -14,7 +14,7 @@
         autocomplete="off"
       >
     </label>
-    <button type="submit">Edit the Bio</button>
+    <button type="submit">Submit</button>
   </form>
 </section>
 

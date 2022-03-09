@@ -6,7 +6,8 @@
   <h1><%= bandname.name %></h1>
   <h2>Rating: <%= avgRating %></h2>
   <h2>Bio: <%= bandname.bio %></h2>
-  <p>Submitted by <%= bandname.owner.name %></p>
+  <p>Submitted by <a href="/profiles/<%= bandname.owner._id %>">
+    <%= bandname.owner.name %></a></p>
   <form 
   action="/bandnames/<%= bandname._id %>/ratings"
   id="add-rating"

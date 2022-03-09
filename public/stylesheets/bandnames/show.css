@@ -37,21 +37,3 @@ section {
 section div:nth-child(even) {
   font-weight: bold;
 }
-
-#add-review-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1.6rem;
-  margin-bottom: 2rem
-}
-
-#add-review-form > textarea {
-  width: 25rem;
-}
-
-#add-review-form > button {
-  font-size: 1.6rem;
-  width: 16rem;
-  grid-column: 2 / 3;
-  margin-bottom: 2.4rem;
-}

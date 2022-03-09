@@ -23,6 +23,8 @@ Initial wireframe
 - Passport
 - Node
 - git
+- Bootstrap
+- 
 
 ---
 
