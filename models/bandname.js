@@ -15,7 +15,7 @@ const bandNameSchema = new Schema({
   },
   bio: {
     type: String,
-    maxLength: 100,
+    maxLength: 200,
   },
   ratings: [ratingSchema],
   owner: {type: Schema.Types.ObjectId, ref: "Profile"},
