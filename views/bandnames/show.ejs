@@ -19,14 +19,14 @@
     <option value="4">4</option>
     <option value="5" selected>5</option>
   </select>
-  <button type="submit">Add Rating</button>
+  <button type="submit"><i class="fas fa-star-half-stroke"></i></button>
   </form>
   <% if (bandname.owner.equals(user?.profile._id)) { %>
     <form action="/bandnames/<%= bandname._id %>/edit" method="GET">
-      <button type="submit">Edit Bio</button>
+      <button type="submit"><i class="fas fa-pen-to-square"></i></button>
     </form>
     <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete Bandname</button>
+      <button type="submit"><i class="fas fa-trash-can"></i></button>
     </form>
   <% } %>
 </section>

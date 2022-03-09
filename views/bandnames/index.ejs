@@ -7,21 +7,21 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Rank</th>
+        <th scope="col"><i class="fas fa-arrow-down-wide-short"></i>Rank</th>
         <th scope="col">Name</th>
-        <th scope="col">Rating</th>
+        <th scope="col"><i class="fas fa-star-half-stroke"></i>Rating</th>
       </tr>
     </thead>
     <tbody>
   <% bandnames.forEach(bandname => { %>
     <tr>
-      <td>#</td>
-      <td><a href="/bandnames/<%= bandname._id %>"><%= bandname.name %></a></td>
-      <td><%= bandname.avg %></td>
+      <td class="td">#</td>
+      <td class="td"><a href="/bandnames/<%= bandname._id %>"><%= bandname.name %></a></td>
+      <td class="td"><%= bandname.avg %></td>
         <td>  
           <% if (bandname.owner.equals(user?.profile._id)) { %>
         <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
-        <button>Delete?</button>
+        <button><i class="fas fa-trash-can"></i></button>
       </form>
       <% } %>
       </td>

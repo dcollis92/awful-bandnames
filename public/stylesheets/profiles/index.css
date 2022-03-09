@@ -17,6 +17,10 @@ table td {
   min-width: 100px;
 }
 
+#card {
+  border-radius: 10px;
+}
+
 #list a {
   border-radius: 4px;
   background-color: #b8c0c2;
@@ -26,6 +30,9 @@ table td {
   color: #424748;
 }
 
-#list a:hover {
-  background-color: white;
+
+a:hover {
+  background-color: #8dd7cf;
+  color: black;
+  border-radius: 5px;
 }

@@ -3,16 +3,12 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Edit Bandname Bio</h1>
+  <h1>Edit <%= bandname.name %> Bio</h1>
   <form action="/bandnames/<%= bandname._id %>?_method=PUT" method="POST">
     <label>
-      Name:
-      <input 
-        type="text" 
-        name="bio" 
-        value="<%= bandname.bio %>"
-        autocomplete="off"
-      >
+      Bio (200 characters max):
+      <br>
+      <textarea name="bio" id="bio-textarea" value="<%= bandname.bio %>" autocomplete="off"></textarea>
     </label>
     <button type="submit">Submit</button>
   </form>
