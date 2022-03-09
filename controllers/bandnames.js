@@ -49,11 +49,10 @@ function show(req, res) {
   Bandname.findById(req.params.id)
   .populate("owner")
   .then(bandname => {
-    const avg = getAvgRating(bandname.ratings)
+    bandname.avg = getAvgRating(bandname.ratings)
     res.render("bandnames/show", {
       bandname,
       title: "Show Awful Bandname",
-      avgRating: avg,
     })
   })
   .catch(err => {

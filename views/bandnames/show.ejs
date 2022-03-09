@@ -4,22 +4,17 @@
 
 <section>
   <h1><%= bandname.name %></h1>
-  <h2>Rating: <%= avgRating %></h2>
+  <div class="star-rating">
+    <%- include('../partials/star-rating') %>
+  </div>
   <h2>Bio: <%= bandname.bio %></h2>
   <p>Submitted by <a href="/profiles/<%= bandname.owner._id %>">
-    <%= bandname.owner.name %></a></p>
+    <%= bandname.owner.name %></a></p> 
   <form 
   action="/bandnames/<%= bandname._id %>/ratings"
   id="add-rating"
   method="POST">
   <%- include('../partials/star') %>
-  <!-- <select name="rating" id="rating-select">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5" selected>5</option>
-  </select> -->
   <br>
   <button type="submit">Submit Rating</button>
   </form>

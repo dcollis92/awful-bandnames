@@ -18,23 +18,18 @@ fieldset, label { margin: 0; padding: 0; }
   content: "\f005";
 }
 
-.star-rating > .half:before { 
-  content: "\f089";
-  position: absolute;
-}
-
 .star-rating > label { 
   color: #ddd; 
- float: right; 
+  float: right; 
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
 
 .star-rating > input:checked ~ label, /* show gold star when clicked */
 .star-rating:not(:checked) > label:hover, /* hover current star */
-.star-rating:not(:checked) > label:hover ~ label { color: black;  } /* hover previous stars in list */
+.star-rating:not(:checked) > label:hover ~ label { color: black; } /* hover previous stars in list */
 
 .star-rating > input:checked + label:hover, /* hover current star when changing rating */
 .star-rating > input:checked ~ label:hover,
 .star-rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.star-rating > input:checked ~ label:hover ~ label { color: black;  } 
+.star-rating > input:checked ~ label:hover ~ label { color: black; } 

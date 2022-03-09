@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/profiles/show.css">
 <%- include('../partials/nav') %>
 
 <main>
@@ -25,23 +26,30 @@
       </tr>
     </thead>
     <tbody>
-      <!-- <#% if (bandname.owner.equals(user?.profile._id)) { %>
-  <#% bandnames.forEach(bandname => { %> -->
-    <!-- <tr>
+      <% bandnames.forEach(bandname => { %>
+      <% if (bandname.owner.equals(profile._id)) { %>
+   <tr>
       <td class="td">#</td>
-      <td class="td"><a href="/bandnames/<%#= bandname._id %>"><%#= bandname.name %></a></td>
-      <td class="td"><%#= bandname.avg %>
-        <%#- include('../partials/star') %>
+      <td class="td"><a href="/bandnames/<%= bandname._id %>">
+        <%= bandname.name %></a></td>
+       <td class="td star-rating">
+        <% for( let i = 0; i < (5 - bandname.avg); i++) { %>
+          <label class = ""></label>
+        <% } %>
+        <% for(let i = 0; i < bandname.avg; i++) { %>
+          <label class = "checked"></label>
+        <% } %> 
       </td>
         <td>  
-        <form action="/bandnames/<%#= bandname._id %>?_method=DELETE" method="POST">
-        <button><i class="fas fa-trash-can"></i></button>
-      </form>
-      
+          <% if (bandname.owner.equals(user?.profile._id)) { %>
+            <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
+            <button><i class="fas fa-trash-can"></i></button>
+          </form>
+          <% } %>
       </td>
-  </tr> -->
-  <%# }) %>
-  <%# } %>
+  </tr>
+  <% } %>
+  <% }) %>
 </tbody>
 </table>
 </main>

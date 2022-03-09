@@ -30,3 +30,20 @@ a:hover {
   color: black;
   border-radius: 5px;
 }
+
+.star-rating > label:before { 
+  margin: 0;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.star-rating > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+.star-rating > label.checked {
+  color: black;
+}

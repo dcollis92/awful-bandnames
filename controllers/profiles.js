@@ -1,4 +1,5 @@
 import { Profile } from "../models/profile.js"
+import { Bandname } from "../models/bandname.js"
 
 
 function index(req, res) {
@@ -21,11 +22,18 @@ function show(req, res) {
     Profile.findById(req.user.profile._id)
     .then(self => {
       const isSelf = self._id.equals(profile._id)
-      res.render("profiles/show", {
-        profile,
-        title: `${profile.name}'s profile`,
-        self,
-        isSelf,
+      Bandname.find({})
+      .then(bandnames => {
+        bandnames.forEach(name => {
+          name.avg = getAvgRating(name.ratings)
+        })
+        res.render("profiles/show", {
+          profile,
+          title: `${profile.name}'s profile`,
+          self,
+          isSelf,
+          bandnames,
+        })
       })
     })
   })
@@ -33,6 +41,15 @@ function show(req, res) {
     console.log(err)
     res.redirect(`/profiles/${req.user.profile._id}`)
   })
+}
+
+function getAvgRating(ratings) {
+  if(!ratings.length) return 0;
+  console.log(ratings)
+  const avg = ratings.reduce((total, r) => 
+    total + parseInt(r.rating), 0) 
+  console.log('avg', avg)
+  return Math.round(avg / ratings.length);
 }
 
 

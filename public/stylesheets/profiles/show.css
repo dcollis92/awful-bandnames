@@ -51,13 +51,19 @@ section div:nth-child(even) {
   margin-bottom: 2rem
 }
 
-/* #add-review-form > textarea {
-  width: 25rem;
+.star-rating > label:before { 
+  margin: 0;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
 }
 
-#add-review-form > button {
-  font-size: 1.6rem;
-  width: 16rem;
-  grid-column: 2 / 3;
-  margin-bottom: 2.4rem;
-} */
+.star-rating > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+.star-rating > label.checked {
+  color: black;
+}
