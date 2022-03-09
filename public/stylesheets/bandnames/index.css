@@ -24,17 +24,12 @@ h1 {
   justify-content: center;
 }
 
-#list a {
+a {
   border-radius: 4px;
-  background-color: #b8c0c2;
   padding: 4px;
   text-decoration: none;
-  font-size: 1.6rem;
-  color: #424748;
-}
-
-a:visited {
-  color: #424748;
+  font-size: 2rem;
+  color: black;
 }
 
 a:hover {

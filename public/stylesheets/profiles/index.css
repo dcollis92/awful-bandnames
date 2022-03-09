@@ -26,10 +26,6 @@ table td {
   color: #424748;
 }
 
-#list a:visited{
-  color: #424748;
-}
-
 #list a:hover {
   background-color: white;
 }

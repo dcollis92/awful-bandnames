@@ -19,9 +19,11 @@
       <td><a href="/bandnames/<%= bandname._id %>"><%= bandname.name %></a></td>
       <td><%= bandname.avg %></td>
         <td>  
+          <% if (bandname.owner.equals(user?.profile._id)) { %>
         <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
         <button>Delete?</button>
       </form>
+      <% } %>
       </td>
   </tr>
   <% }) %>
