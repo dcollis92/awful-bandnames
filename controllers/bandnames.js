@@ -102,7 +102,7 @@ function update(req, res) {
     if (bandname.owner.equals(req.user.profile._id)) {
         bandname.updateOne(req.body, {new: true})
       .then(() => {
-        res.redirect(`/bandnames/${bandname._id}`)
+        res.redirect('/bandnames')
       })
     } else {
       throw new Error ("🚫 Not Authorized! 🚫")

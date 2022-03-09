@@ -38,3 +38,8 @@ section {
 section div:nth-child(even) {
   font-weight: bold;
 }
+
+button {
+  align-items: center;
+  flex-direction: column;
+}

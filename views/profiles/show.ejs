@@ -9,37 +9,41 @@
         src="<%= profile.avatar %>" 
         alt="<%= profile.name %> avatar"
       >
+      <br>
+      <%= profile.name %>'s submissions
     </div>
   <% } %>
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">
+          <i class="fas fa-arrow-down-wide-short">
+          </i>Rank</th>
+        <th scope="col"><i class="fas fa-user">
+        </i>Name</th>
+        <th scope="col"><i class="fas fa-star-half-stroke"></i>Rating</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+      <!-- <#% if (bandname.owner.equals(user?.profile._id)) { %>
+  <#% bandnames.forEach(bandname => { %> -->
+    <!-- <tr>
+      <td class="td">#</td>
+      <td class="td"><a href="/bandnames/<%#= bandname._id %>"><%#= bandname.name %></a></td>
+      <td class="td"><%#= bandname.avg %>
+        <%#- include('../partials/star') %>
+      </td>
+        <td>  
+        <form action="/bandnames/<%#= bandname._id %>?_method=DELETE" method="POST">
+        <button><i class="fas fa-trash-can"></i></button>
+      </form>
+      
+      </td>
+  </tr> -->
+  <%# }) %>
+  <%# } %>
+</tbody>
+</table>
 </main>
 
 
