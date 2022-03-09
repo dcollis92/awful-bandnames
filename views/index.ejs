@@ -12,7 +12,9 @@
     </div>
     <%= user.profile.name %> 
   <% } %>
-  
+  <% if (!user?.profile.avatar) { %> 
+    <h2>Please Login Above</h2>
+    <% } %>
 </main>
 
 <%- include('./partials/footer') %>

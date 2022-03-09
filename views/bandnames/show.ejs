@@ -22,10 +22,10 @@
   </form>
   <% if (bandname.owner.equals(user?.profile._id)) { %>
     <form action="/bandnames/<%= bandname._id %>/edit" method="GET">
-      <button type="submit">Edit the Bio?</button>
+      <button type="submit">Edit Bio</button>
     </form>
     <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete this Bandname?</button>
+      <button type="submit">Delete Bandname</button>
     </form>
   <% } %>
 </section>
