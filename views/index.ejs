@@ -2,7 +2,7 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Welcome %></h1>
+  <h1>Welcome</h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
@@ -10,6 +10,7 @@
         alt="<%= user.profile.name %> avatar"
       />
     </div>
+    <%= user.profile.name %> 
   <% } %>
   
 </main>
