@@ -23,7 +23,7 @@ function getAvgRating(ratings) {
   const avg = ratings.reduce((total, r) => 
     total + parseInt(r.rating), 0) 
   console.log('avg', avg)
-  return avg / ratings.length
+  return Math.round(avg / ratings.length)
 }
 
 function newBandname(req, res) {
@@ -79,7 +79,7 @@ function addRating(req, res) {
 }
 
 function editRating(req, res) {
-  
+
 }
 
 function edit(req, res) {
