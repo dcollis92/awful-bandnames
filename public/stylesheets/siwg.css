@@ -1,4 +1,4 @@
-.siwg {
+/* .siwg {
   background: url(/images/auth/google/siwg_light_normal.png);
   cursor: pointer;
   border: none;
@@ -21,7 +21,7 @@
 }
 
 /* This pre-loads the siwg focus and active buttons */
-.siwg::after {
+/* .siwg::after {
   position: absolute;
   width: 0;
   height: 0;
@@ -32,7 +32,7 @@
 }
 
 /* This hides the siwg alt text and broken image icon */
-#siwg-image {
+/* #siwg-image {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   margin: -1px;
@@ -40,4 +40,4 @@
   padding: 0;
   position: absolute;
   width: 1px;
-}
+} */ */ */

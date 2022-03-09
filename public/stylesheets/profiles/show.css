@@ -1,12 +1,3 @@
-ul {
-  margin: 0 0 1.6rem;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  font-weight: bold;
-}
 
 table {
   font-size: 2rem;
@@ -42,28 +33,4 @@ div {
 
 section div:nth-child(even) {
   font-weight: bold;
-}
-
-#add-review-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1.6rem;
-  margin-bottom: 2rem
-}
-
-.star-rating > label:before { 
-  margin: 0;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
-}
-
-.star-rating > label { 
-  color: #ddd; 
-  float: right; 
-}
-
-.star-rating > label.checked {
-  color: black;
 }
