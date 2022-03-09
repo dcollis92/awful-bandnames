@@ -21,6 +21,9 @@
   <button type="submit">Add Rating</button>
   </form>
   <% if (bandname.owner.equals(user?.profile._id)) { %>
+    <form action="/bandnames/<%= bandname._id %>/edit" method="GET">
+      <button type="submit">Edit the Bio?</button>
+    </form>
     <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete this Bandname?</button>
     </form>
