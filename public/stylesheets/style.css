@@ -115,11 +115,13 @@ form * {
 
 table {
   font-size: 2rem;
+  border: 2px solid black;
 }
 
 table thead th {
   padding: 5px;
   border-bottom: 2px solid #424748;
+  
 }
 
 table td {
