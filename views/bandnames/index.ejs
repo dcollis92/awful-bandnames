@@ -24,7 +24,7 @@
       <td class="td"><a href="/bandnames/<%= bandname._id %>"><%= bandname.name %></a></td>
       <td class="td star-rating">
         <% for( let i = 0; i < (5 - bandname.avg); i++ ) { %>
-          <label class = ""></label>
+          <label class = "unchecked"></label>
         <% } %>
         <% for(let i = 0; i < bandname.avg; i++) { %>
           <label class = "checked"></label>
