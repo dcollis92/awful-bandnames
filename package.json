@@ -7,7 +7,6 @@
     "start": "node ./bin/www.js"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.2",
     "debug": "^4.3.3",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
