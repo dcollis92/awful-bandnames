@@ -8,12 +8,6 @@ form {
   font-size: 2rem;
 }
 
-form * {
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 2rem;
-}
-
 form > button {
   /* grid-column: span 2; */
   width: 16rem;

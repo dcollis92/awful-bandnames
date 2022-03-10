@@ -29,10 +29,10 @@
       </tr>
     </thead>
     <tbody>
-      <% bandnames.forEach(bandname => { %>
+      <% bandnames.forEach((bandname, index) => { %>
       <% if (bandname.owner.equals(profile._id)) { %>
    <tr>
-      <td class="td">#</td>
+      <td class="td">#<%= index+1 %> </td>
       <td class="td"><a href="/bandnames/<%= bandname._id %>">
         <%= bandname.name %></a></td>
        <td class="td star-rating">

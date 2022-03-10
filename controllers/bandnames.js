@@ -3,12 +3,16 @@ import { Bandname } from "../models/bandname.js"
 function index(req, res) {
   Bandname.find({})
   .then(bandnames => {
+    const nameArr = []
     bandnames.forEach(name => {
       name.avg = getAvgRating(name.ratings)
+      nameArr.push(name)
     })
+    const sorted = rankRating(nameArr)
+    console.log(sorted)
     res.render("bandnames/index", {
       title: "Awful Bandnames",
-      bandnames,
+      bandnames: sorted,
     })
   })
   .catch(err => {
@@ -25,6 +29,12 @@ function getAvgRating(ratings) {
   console.log('avg', avg)
   return Math.round(avg / ratings.length);
 }
+
+function rankRating(arr) {
+  return arr.sort((ratingA, ratingB) => ratingB.avg - ratingA.avg) 
+}
+
+rankRating([5, 2, 4, 3, 2, 1])
 
 function newBandname(req, res) {
   res.render('bandnames/new', {
@@ -65,7 +75,6 @@ function addRating(req, res) {
   Bandname.findById(req.params.id)
   .then(bandname => {
     bandname.ratings.push(req.body)
-    //round off
     bandname.save()
     .then(() => {
       res.redirect(`/bandnames/${bandname._id}`)
@@ -77,9 +86,6 @@ function addRating(req, res) {
   })
 }
 
-function editRating(req, res) {
-
-}
 
 function edit(req, res) {
   Bandname.findById(req.params.id)
@@ -137,7 +143,6 @@ export {
   create,
   show,
   addRating,
-  editRating,
   edit,
   update,
   deleteBandname as delete

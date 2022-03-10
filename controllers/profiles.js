@@ -24,15 +24,18 @@ function show(req, res) {
       const isSelf = self._id.equals(profile._id)
       Bandname.find({})
       .then(bandnames => {
+        const nameArr = []
         bandnames.forEach(name => {
           name.avg = getAvgRating(name.ratings)
+          nameArr.push(name)
         })
+        const sorted = rankRating(nameArr)
         res.render("profiles/show", {
           profile,
           title: `${profile.name}'s profile`,
           self,
           isSelf,
-          bandnames,
+          bandnames: sorted,
         })
       })
     })
@@ -50,6 +53,10 @@ function getAvgRating(ratings) {
     total + parseInt(r.rating), 0) 
   console.log('avg', avg)
   return Math.round(avg / ratings.length);
+}
+
+function rankRating(arr) {
+  return arr.sort((ratingA, ratingB) => ratingB.avg - ratingA.avg) 
 }
 
 
