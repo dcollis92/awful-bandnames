@@ -24,8 +24,7 @@ Initial wireframe
 - Node
 - git
 - Bootstrap
-- 
-
+  
 ---
 
 ## ⚙ Credits 
@@ -36,7 +35,7 @@ Initial wireframe
 
 ## ⚙ Recent Changes 
 
-- 
+- Implimented a star rating feature via a CSS Widget taken from Codepen. This star rating displays the current average rating and also the 
 - 
 
 ## ⚙ Ice Box 

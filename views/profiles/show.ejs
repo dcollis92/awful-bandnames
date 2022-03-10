@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/profiles/show.css">
 <%- include('../partials/nav') %>
 
-<main>
+<main id="pr-show">
   <% if (profile.avatar) { %>
     <div>
       <img 
@@ -14,7 +14,7 @@
       <h1><%= profile.name %>'s submissions</h1>
     </div>
   <% } %>
-  <table class="table">
+  <table class="bn-table table">
     <thead>
       <tr>
         <th scope="col">
@@ -29,21 +29,21 @@
       </tr>
     </thead>
     <tbody>
-      <% bandnames.forEach((bandname, index) => { %>
+      <% bandnames.forEach((bandname, idx) => { %>
       <% if (bandname.owner.equals(profile._id)) { %>
    <tr>
-      <td class="td">#<%= index+1 %> </td>
+      <td class="td">#<%= idx+1 %> </td>
       <td class="td"><a href="/bandnames/<%= bandname._id %>">
         <%= bandname.name %></a></td>
-       <td class="td star-rating">
-        <% for(let i = 0; i < (5 - bandname.avg); i++) { %>
-          <label class = "unchecked"></label>
-        <% } %>
-        <% for(let i = 0; i < bandname.avg; i++) { %>
-          <label class = "checked"></label>
-        <% } %> 
-      </td>
-        <td>  
+        <td class="td star-rating">
+          <% for(let i = 0; i < bandname.avg; i++) { %>
+            <label class = "checked"></label>
+          <% } %> 
+          <% for( let i = 0; i < (5 - bandname.avg); i++) { %>
+            <label class = "unchecked"></label>
+          <% } %>
+        </td>
+      <td class="td"> 
           <% if (bandname.owner.equals(user?.profile._id)) { %>
             <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
             <button><i class="fas fa-trash-can"></i></button>

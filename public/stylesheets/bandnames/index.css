@@ -17,3 +17,15 @@ a:hover {
   border-radius: 5px;
 }
 
+.td {
+  border: 0;
+}
+
+tr {
+  border-bottom: 1px solid lightgray;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: start;
+}

@@ -1,15 +1,18 @@
 form {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
-  /* grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 35.2rem)); */
+  grid-template-columns: repeat(2, minmax(auto, 35.2rem));
   font-size: 2rem;
+  grid-column: span 3;
+  width: 20rem;
+  margin: auto;
+  font-size: 2.2rem;
 }
 
 form > button {
-  /* grid-column: span 2; */
+  grid-column: span 2;
   width: 16rem;
   font-size: 2.2rem;
 }
@@ -19,4 +22,15 @@ section {
   align-items: center;
   flex-direction: column;
   /* grid-gap: 1.3rem; */
+}
+
+textarea {
+  width: 30rem;
+  height: 15rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

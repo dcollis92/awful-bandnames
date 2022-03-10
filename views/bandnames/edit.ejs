@@ -2,16 +2,18 @@
 <link rel="stylesheet" href="/stylesheets/bandnames/edit.css">
 <%- include('../partials/nav') %>
 
-<section>
-  <h1>Edit <%= bandname.name %> Bio</h1>
+<main>
+<section id="bn-edit">
+  <h1>Edit Bio</h1>
+  <h2><%= bandname.name %></h2>
   <form action="/bandnames/<%= bandname._id %>?_method=PUT" method="POST">
     <label>
-      Bio (200 characters max):
-      <br>
+      (200 characters max):
       <textarea name="bio" id="bio-textarea" value="<%= bandname.bio %>" autocomplete="off"></textarea>
     </label>
     <button type="submit">Submit</button>
   </form>
 </section>
+</main>
 
 <%- include('../partials/footer') %>
