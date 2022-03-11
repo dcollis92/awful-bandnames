@@ -28,4 +28,5 @@ tr {
 .star-rating {
   display: flex;
   justify-content: start;
+  min-width: 188px;
 }

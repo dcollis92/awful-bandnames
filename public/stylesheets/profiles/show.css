@@ -2,6 +2,7 @@
 section {
   display: grid;
   grid-template-columns: auto auto;
+  justify-content: start;
   grid-gap: 1.6rem;
 }
 
@@ -10,7 +11,7 @@ div {
   display: flex;
   align-items: center;
   flex-direction: column;
-  grid-gap: 1.3rem;
+  /* grid-gap: 0.5rem; */
 }
 
 section div:nth-child(even) {
