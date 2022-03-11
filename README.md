@@ -36,7 +36,7 @@ Initial wireframe
 ## ⚙ Recent Changes 
 
 - Implimented a star rating feature via a Pure CSS Widget taken from Codepen. This star rating displays the current average rating and also allows the user to add a data entry via the widget on the bandnames/show view page.
-- 
+- Added a CSS animation transition to allow each page to load in a smooth, aesthetically pleasing manner.
 
 ## ⚙ Ice Box 
 
