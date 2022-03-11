@@ -167,4 +167,11 @@ img {
   border-radius: 50%;
   border: 2px solid black;
   filter: grayscale(1);
+  max-width: 100px;
+  max-height: 100px;
+}
+
+  a:hover {
+    background-color: #8dd7cf;
+    color: black;
 }
