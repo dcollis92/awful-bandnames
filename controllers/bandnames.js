@@ -20,7 +20,7 @@ function index(req, res) {
   })
 }
 
-/* Index helper functions */
+/* ----- Index helper functions ----- */
 function getAvgRating(ratings) {
   if(!ratings.length) return 0;
   const avg = ratings.reduce((total, r) => 
@@ -28,10 +28,10 @@ function getAvgRating(ratings) {
   return Math.round(avg / ratings.length);
 }
 
-/* Index helper functions */
 function rankRating(arr) {
   return arr.sort((ratingA, ratingB) => ratingB.avg - ratingA.avg) 
 }
+/* ---------------------------------- */
 
 
 function newBandname(req, res) {

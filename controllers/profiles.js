@@ -46,7 +46,7 @@ function show(req, res) {
   })
 }
 
-/* Show helper functions */
+/* ----- Show helper functions ----- */
 function getAvgRating(ratings) {
   if(!ratings.length) return 0;
   console.log(ratings)
@@ -55,12 +55,11 @@ function getAvgRating(ratings) {
   return Math.round(avg / ratings.length);
 }
 
-/* Show helper functions */
 function rankRating(arr) {
   return arr.sort((ratingA, ratingB) => 
   ratingB.avg - ratingA.avg) 
 }
-
+/* --------------------------------- */
 
 export {
   index,
