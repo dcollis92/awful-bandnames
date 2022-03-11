@@ -1,6 +1,6 @@
 # Awful Bandnames
 
-![Awful Bandnames homepage](<insert link>)
+![Awful Bandnames homepage](https://i.imgur.com/1Ow9Hfi.png)
 
 Awful Bandnames is a full CRUD application for entering every terrible bandname you've ever thought of. You can enter a name, bio, and add a rating to your submission and submissions by other users. On the profiles page, you can see each individuals contributions to the database (including the submission's rank in the full database). Have fun and share your awful bandnames!
 
@@ -35,13 +35,13 @@ Initial wireframe
 
 ## ⚙ Recent Changes 
 
-- Implimented a star rating feature via a CSS Widget taken from Codepen. This star rating displays the current average rating and also the 
+- Implimented a star rating feature via a Pure CSS Widget taken from Codepen. This star rating displays the current average rating and also allows the user to add a data entry via the widget on the bandnames/show view page.
 - 
 
 ## ⚙ Ice Box 
 
-- [ ] Font design
-- [ ] Halo around fonts
+- [x] Font design
+- [x] Halo around fonts
 - [ ] Light/Dark Mode
 - [ ] Fix Safari/mobile functionality
 - [ ] Accessibility features (keyboard input, colorblind settings)
