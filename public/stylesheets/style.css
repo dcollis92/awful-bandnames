@@ -166,4 +166,5 @@ button {
 img {
   border-radius: 50%;
   border: 2px solid black;
+  filter: grayscale(100%) contrast(1.5);
 }
