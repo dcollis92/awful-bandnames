@@ -26,7 +26,7 @@
   </form>
   <% if (bandname.owner.equals(user?.profile._id)) { %>
     <form action="/bandnames/<%= bandname._id %>/edit" method="GET">
-      <button type="submit"><i class="fas fa-pen-to-square"></i></button>
+      <button type="submit">Edit Bio<i class="fas fa-pen-to-square"></i></button>
     </form>
     <form action="/bandnames/<%= bandname._id %>?_method=DELETE" method="POST">
       <button type="submit"><i class="fas fa-trash-can"></i></button>

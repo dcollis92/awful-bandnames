@@ -28,7 +28,7 @@ tr {
 .star-rating {
   display: flex;
   justify-content: start;
-  min-width: 188px;
+  min-width: 135px;
 }
 
 .star-rating:not(:checked) > label:hover ~ label { color: #ddd;  }
