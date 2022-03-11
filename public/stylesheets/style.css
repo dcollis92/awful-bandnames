@@ -152,7 +152,7 @@ button {
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-    table {
-      max-width: 350px;
+    body {
+      max-width: 375px;
     }
 }
