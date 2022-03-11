@@ -166,5 +166,5 @@ button {
 img {
   border-radius: 50%;
   border: 2px solid black;
-  filter: grayscale(100%) contrast(1.5);
+  filter: brightness(1) saturate(100%) invert(0%) sepia(63%) saturate(217%) hue-rotate(110deg) brightness(90%) contrast(86%);
 }

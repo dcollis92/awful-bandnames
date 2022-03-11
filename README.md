@@ -21,11 +21,12 @@ Initial wireframe
 - JS / Embedded JS
 - MongoDB / Mongoose
 - Google Oauth
-- Express
 - Passport
+- Express
 - Node
-- git
 - Bootstrap
+- Heroku
+- git
   
 ---
 
