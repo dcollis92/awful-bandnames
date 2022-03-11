@@ -11,6 +11,8 @@ Initial wireframe
 
 ## [Use the app here](https://awful-bandnames.herokuapp.com/)
 
+## [Trello plannning board can be found here](https://trello.com/b/Ljl8HeF3/unit-2-proposal)
+
 ---
 
 ## ⚙ Technologies Used 
