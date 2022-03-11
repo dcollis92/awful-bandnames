@@ -114,6 +114,7 @@ form * {
 
 table {
   font-size: 2rem;
+  max-width: 489px;
 }
 
 table thead th {

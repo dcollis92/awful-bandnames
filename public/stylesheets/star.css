@@ -5,8 +5,7 @@ fieldset, label { margin: 0; padding: 0; }
 /****** Style Star Rating Widget *****/
 
 .star-rating { 
-  /* border: none; */
-  /* float: left; */
+  float: left;
 }
 
 .star-rating > input { display: none; } 
@@ -20,7 +19,7 @@ fieldset, label { margin: 0; padding: 0; }
 
 .star-rating > label { 
   color: #ddd; 
-  /* float: right;  */
+  float: right; 
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/

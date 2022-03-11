@@ -30,3 +30,5 @@ tr {
   justify-content: start;
   min-width: 188px;
 }
+
+.star-rating:not(:checked) > label:hover ~ label { color: #ddd;  }

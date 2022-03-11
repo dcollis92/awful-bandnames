@@ -53,3 +53,5 @@ tr {
   display: flex;
   justify-content: start;
 }
+
+.star-rating:not(:checked) > label:hover ~ label { color: #ddd;  }
