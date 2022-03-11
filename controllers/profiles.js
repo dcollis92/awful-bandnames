@@ -46,22 +46,23 @@ function show(req, res) {
   })
 }
 
+/* Show helper functions */
 function getAvgRating(ratings) {
   if(!ratings.length) return 0;
   console.log(ratings)
   const avg = ratings.reduce((total, r) => 
     total + parseInt(r.rating), 0) 
-  console.log('avg', avg)
   return Math.round(avg / ratings.length);
 }
 
+/* Show helper functions */
 function rankRating(arr) {
-  return arr.sort((ratingA, ratingB) => ratingB.avg - ratingA.avg) 
+  return arr.sort((ratingA, ratingB) => 
+  ratingB.avg - ratingA.avg) 
 }
 
 
 export {
   index,
   show,
-
 }

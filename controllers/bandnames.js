@@ -9,7 +9,6 @@ function index(req, res) {
       nameArr.push(name)
     })
     const sorted = rankRating(nameArr)
-    console.log(sorted)
     res.render("bandnames/index", {
       title: "Awful Bandnames",
       bandnames: sorted,
@@ -21,20 +20,19 @@ function index(req, res) {
   })
 }
 
+/* Index helper functions */
 function getAvgRating(ratings) {
   if(!ratings.length) return 0;
-  console.log(ratings)
   const avg = ratings.reduce((total, r) => 
     total + parseInt(r.rating), 0) 
-  console.log('avg', avg)
   return Math.round(avg / ratings.length);
 }
 
+/* Index helper functions */
 function rankRating(arr) {
   return arr.sort((ratingA, ratingB) => ratingB.avg - ratingA.avg) 
 }
 
-rankRating([5, 2, 4, 3, 2, 1])
 
 function newBandname(req, res) {
   res.render('bandnames/new', {
@@ -44,7 +42,6 @@ function newBandname(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
-  console.log(req.body)
   Bandname.create(req.body)
   .then(bandname => {
     res.redirect("/bandnames")
