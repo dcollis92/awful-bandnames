@@ -31,4 +31,6 @@ tr {
   min-width: 135px;
 }
 
-.star-rating:not(:checked) > label:hover ~ label { color: #ddd;  }
+.star-rating:not(:checked) > label:hover ~ label {
+  color: #ddd;
+}

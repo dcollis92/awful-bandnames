@@ -25,7 +25,7 @@ html {
   /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default but can be overridden as needed */
   box-sizing: inherit;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   letter-spacing: 0.075em;
 }
 
@@ -92,7 +92,6 @@ nav > a {
 nav > a:hover {
   color: white;
   background-color: #424748;
-
 }
 
 nav > a.active {
@@ -118,7 +117,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
   letter-spacing: 0em;
 }
 
@@ -147,7 +146,7 @@ button {
   border-radius: 10px;
 }
 
-.star-rating > label:before { 
+.star-rating > label:before {
   margin: 0;
   font-size: 1.25em;
   font-family: FontAwesome;
@@ -155,8 +154,8 @@ button {
   content: "\f005";
 }
 
-.star-rating > label { 
-  color: #ddd; 
+.star-rating > label {
+  color: #ddd;
 }
 
 .star-rating > label.checked {
@@ -171,7 +170,7 @@ img {
   max-height: 100px;
 }
 
-  a:hover {
-    background-color: #8dd7cf;
-    color: black;
+a:hover {
+  background-color: #8dd7cf;
+  color: black;
 }

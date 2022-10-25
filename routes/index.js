@@ -1,11 +1,9 @@
-import { Router } from 'express'
+import { Router } from "express";
 
-const router = Router()
+const router = Router();
 
-router.get('/', function (req, res) {
-  res.redirect('/bandnames')
-})
+router.get("/", function (req, res) {
+  res.redirect("/bandnames");
+});
 
-export {
-  router
-}
+export { router };
