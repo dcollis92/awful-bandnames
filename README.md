@@ -20,12 +20,12 @@ Initial wireframe
 - CSS
 - JS / Embedded JS
 - MongoDB / Mongoose
-- Google Oauth
+- Google OAuth
 - Passport
 - Express
 - Node
 - Bootstrap
-- Heroku
+- Railway
 - git
 
 ---
