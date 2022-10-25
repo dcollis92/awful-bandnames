@@ -4,8 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node ./bin/www.js",
-    "build": "webpack --config webpack.config.js"
+    "start": "node ./bin/www.js"
   },
   "dependencies": {
     "debug": "^4.3.3",
