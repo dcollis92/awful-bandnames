@@ -9,13 +9,13 @@ Initial wireframe
 
 ---
 
-## ➡ [Use the app here](https://awful-bandnames.herokuapp.com/)
+## ➡ [Use the app here](https://awful-bandnames.up.railway.app/)
 
 ## ➡ [Trello board can be found here](https://trello.com/b/Ljl8HeF3/unit-2-proposal)
 
 ---
 
-## ⚙ Technologies Used 
+## ⚙ Technologies Used
 
 - CSS
 - JS / Embedded JS
@@ -27,21 +27,21 @@ Initial wireframe
 - Bootstrap
 - Heroku
 - git
-  
+
 ---
 
-## ⚙ Credits 
+## ⚙ Credits
 
 - [Attributions](https://github.com/dcollis92/awful-bandnames/blob/main/attributions.md) listed here.
 
 ---
 
-## ⚙ Recent Changes 
+## ⚙ Recent Changes
 
 - Implimented a star rating feature via a Pure CSS Widget taken from Codepen. This star rating displays the current average rating and also allows the user to add a data entry via the widget on the bandnames/show view page.
 - Added a CSS animation transition to allow each page to load in a smooth, aesthetically pleasing manner.
 
-## ⚙ Ice Box 
+## ⚙ Ice Box
 
 - [x] Font design
 - [x] Halo around fonts

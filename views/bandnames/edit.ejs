@@ -1,19 +1,24 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/bandnames/edit.css">
+<link rel="stylesheet" href="/stylesheets/bandnames/edit.css" />
 <%- include('../partials/nav') %>
 
 <main>
-<section id="bn-edit">
-  <h1>Edit Bio</h1>
-  <h2><%= bandname.name %></h2>
-  <form action="/bandnames/<%= bandname._id %>?_method=PUT" method="POST">
-    <label>
-      (200 characters max):
-      <textarea name="bio" id="bio-textarea" value="<%= bandname.bio %>" autocomplete="off"></textarea>
-    </label>
-    <button type="submit">Submit</button>
-  </form>
-</section>
+  <section id="bn-edit">
+    <h1>Edit Bio</h1>
+    <h2><%= bandname.name %></h2>
+    <form action="/bandnames/<%= bandname._id %>?_method=PUT" method="POST">
+      <label>
+        (200 characters max):
+        <textarea
+          name="bio"
+          id="bio-textarea"
+          value="<%= bandname.bio %>"
+          autocomplete="off"
+        ></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 </main>
 
 <%- include('../partials/footer') %>
