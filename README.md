@@ -9,7 +9,7 @@ Initial wireframe
 
 ---
 
-## ➡ [Use the app here](https://awful-bandnames.up.railway.app/)
+## ➡ [Use the app here](https://awful-bandnames.herokuapp.com/)
 
 ## ➡ [Trello board can be found here](https://trello.com/b/Ljl8HeF3/unit-2-proposal)
 
@@ -25,7 +25,7 @@ Initial wireframe
 - Express
 - Node
 - Bootstrap
-- Railway
+- Heroku
 - git
 
 ---
